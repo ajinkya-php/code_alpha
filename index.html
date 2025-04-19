@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bug Bounty Submission</title>
+  <style>
+    body { font-family: Arial; background: #f4f4f4; padding: 30px; }
+    .form-container { background: white; padding: 20px; border-radius: 8px; max-width: 500px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    input, textarea, select { width: 100%; margin: 10px 0; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+    button { background: #007BFF; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Submit a Bug</h2>
+  <form action="submit.php" method="POST">
+    <label>Your Name:</label>
+    <input type="text" name="name" required>
+    
+    <label>Your Email:</label>
+    <input type="email" name="email" required>
+    
+    <label>Bug Title:</label>
+    <input type="text" name="title" required>
+
+    <label>Bug Severity:</label>
+    <select name="severity" required>
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+      <option value="Critical">Critical</option>
+    </select>
+
+    <label>Description:</label>
+    <textarea name="description" rows="5" required></textarea>
+
+    <button type="submit">Submit Bug</button>
+  </form>
+</div>
+
+</body>
+</html>
